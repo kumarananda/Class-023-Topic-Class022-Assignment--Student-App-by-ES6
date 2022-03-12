@@ -9,10 +9,10 @@ staff_Add_Form.addEventListener('submit', function (e) {
     // console.log(form_data); //>>  FormData {  }
 
     let data = Object.fromEntries(form_data.entries())
-    console.log(data); // Object { name: "", call: "", location: "", gender: "on", photo: "" } //browser
+    console.log(data); // Object { name: "", call: "", location: "", gender: "Male", photo: "" } //browser
     
     
 })
 
-
-// 22: min
+// check with browser console log
+// 31: min validation
