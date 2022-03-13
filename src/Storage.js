@@ -20,3 +20,5 @@ class Storage {
 
 }
 export default Storage;
+
+// time 1h
