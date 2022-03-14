@@ -50,7 +50,7 @@ function getAllStaff() {
             <td>
                 <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#viewModal"><i class="fas fa-eye"></i></button>
                 <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" ><i class="fas fa-edit"></i></button>
-                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" ><i class="fas fa-trash"></i></button>
+                <button class="btn btn-danger" data-bs-toggle="modal" onclick="alert(${ index })" data-bs-target="#deleteModal" ><i class="fas fa-trash"></i></button>
             </td>
         </tr>
         
