@@ -48,9 +48,9 @@ function getAllStaff() {
             <td>${gender}</td>
             <td><img style=" height:50px; width:50px; " src="${photo ? photo : 'assets/img/okqlvc2w.bmp'}" alt=""></td>
             <td>
-                <button class="btn btn-info" ><i class="fas fa-eye"></i></button>
-                <button class="btn btn-warning" ><i class="fas fa-edit"></i></button>
-                <button class="btn btn-danger" ><i class="fas fa-trash"></i></button>
+                <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#viewModal"><i class="fas fa-eye"></i></button>
+                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" ><i class="fas fa-edit"></i></button>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" ><i class="fas fa-trash"></i></button>
             </td>
         </tr>
         
