@@ -1,4 +1,5 @@
 import  Alert  from "./src/Alert.js";
+import Img from "./src/Img.js";
 import LStorage from "./src/LStorage.js";
 
 // get elenents 
@@ -25,8 +26,6 @@ staff_Add_Form.addEventListener('submit', function (e) {
         staff_Add_Form.reset();
         getAllStaff();
     }
-
-
     
 })
 
@@ -36,24 +35,27 @@ getAllStaff();
 function getAllStaff() {
     let data = LStorage.get('staff');
     // console.log(data);
+    let mImg = "./assets/img/male.bmp";
+    let fmImg = "./assets/img/female.png";
     let staff_list = "";
     data.map((data , index)=>{
         let { photo, gender, location, call, name  } = data;
         staff_list += `
+
         <tr>
             <td>${index + 1}</td>
             <td>${name}</td>
             <td>${call}</td>
             <td>${location}</td>
             <td>${gender}</td>
-            <td><img style=" height:50px; width:50px; " src="${photo ? photo : 'assets/img/okqlvc2w.bmp'}" alt=""></td>
+            <td><img style=" height:50px; width:50px; " src="${photo ? photo : Img.genderImg(gender, mImg, fmImg) }" alt=""></td>
             <td>
                 <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#viewModal"><i class="fas fa-eye"></i></button>
                 <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" ><i class="fas fa-edit"></i></button>
-                <button class="btn btn-danger" data-bs-toggle="modal" onclick="alert(${ index })" data-bs-target="#deleteModal" ><i class="fas fa-trash"></i></button>
+                <button class="btn btn-danger" data-bs-toggle="modal" onclick="" data-bs-target="#deleteModal" ><i class="fas fa-trash"></i></button>
             </td>
         </tr>
-        
+
         `
     })
 
