@@ -5,6 +5,9 @@ import LStorage from "./src/LStorage.js";
 // get elenents 
 const staff_Add_Form = document.getElementById('staff_Add_Form');
 const staff_data_list = document.getElementById('staff_data_list');
+const view_staff_data = document.getElementById('view_staff_data');
+const viewstaffData = document.getElementById('viewstaffData');
+
 
 // staff form for data new add
 staff_Add_Form.addEventListener('submit', function (e) {
